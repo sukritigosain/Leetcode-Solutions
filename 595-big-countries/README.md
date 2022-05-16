@@ -51,8 +51,8 @@ World table:
 +-------------+------------+---------+
 </pre>
 </div>
-# Solution Explanation
-Here we are given two conditions:
-1)The population >= 25000000
-2)Area >= 3000000 km^2
+<h1>Solution Explanation</h1>
+Here we are given two conditions:<br>
+1)The population >= 25000000<br>
+2)Area >= 3000000 km^2<br>
 We can use OR operator since we need to satisfy either of these conditions.
