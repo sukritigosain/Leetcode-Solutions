@@ -12,23 +12,27 @@ class Solution {
                 open.push(s.charAt(i));
             }
             else {
-                if(s.charAt(i)==')' )
+                if(open.empty())
                 {
-                    if(!open.empty() && open.peek()=='(')
+                    return false;
+                }
+                else if(s.charAt(i)==')' )
+                {
+                    if( open.peek()=='(')
                         open.pop();
                     else
                         return false;
                 }
-                if(s.charAt(i)==']')
+                else if(s.charAt(i)==']')
                 {
-                   if(!open.empty() && open.peek()=='[')
+                   if( open.peek()=='[')
                         open.pop();
                     else
                         return false; 
                 }
-                if(s.charAt(i)=='}')
+                else if(s.charAt(i)=='}')
                 {
-                    if(!open.empty() && open.peek()=='{')
+                    if( open.peek()=='{')
                         open.pop();
                     else
                         return false; 
