@@ -16,26 +16,21 @@ class Solution {
                 {
                     return false;
                 }
-                else if(s.charAt(i)==')' )
+                else if(s.charAt(i)==')' && open.peek()=='(')
                 {
-                    if( open.peek()=='(')
                         open.pop();
-                    else
-                        return false;
                 }
-                else if(s.charAt(i)==']')
+                else if(s.charAt(i)==']' &&  open.peek()=='[')
                 {
-                   if( open.peek()=='[')
                         open.pop();
-                    else
-                        return false; 
                 }
-                else if(s.charAt(i)=='}')
+                else if(s.charAt(i)=='}' && open.peek()=='{')
                 {
-                    if( open.peek()=='{')
                         open.pop();
-                    else
-                        return false; 
+                }
+                else
+                {
+                    return false;
                 }
             }
        
